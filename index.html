@@ -22,18 +22,38 @@
       <h2>
 <a id="part-1-hello-world-and-setting-up-an-environment" class="anchor" href="#part-1-hello-world-and-setting-up-an-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: "Hello world" and setting up an environment</h2>
 
-<p>First of all, let's install <a href="https://www.jetbrains.com/webstorm/">Webstorm</a> Javascript IDE as an editor for our project, which is a very convenient tool for developing js applications. Next step is to install node.js. As I am a windows user, I have installed it from <a href="https://nodejs.org/en/download/">here</a> and nvm (Node version manager) - from <a href="https://github.com/coreybutler/nvm-windows">here</a>. Note that, first you need to install node and then nvm.</p>
+<p>First of all, let's install <a href="https://www.jetbrains.com/webstorm/">Webstorm</a> Javascript IDE as an editor for our project, which is a very convenient tool for developing js applications and has ES6 syntax support. 
+Next step is to install node.js. As I am a windows user, I have installed it from <a href="https://nodejs.org/en/download/">here</a> and nvm (Node version manager) - from <a href="https://github.com/coreybutler/nvm-windows">here</a>. Note that, first you need to install node and then nvm.</p>
 
-<p>Now, let's create a new blank(empty) project from Webstorm. If we want to check that if node is installed, run Webstorm terminal (alt + F12) and check with entering a command node -v and nvm -v. </p>
+<p>Now, let's create a new blank(empty) project from Webstorm. If we want to check that if node.js is correctly installed, run Webstorm terminal (alt + F12) and check with entering a command node -v and nvm -v. </p>
 
-<pre><code>class Robot {
-    beep() {
-        console.log("beep");
-        console.log("boop");
-    };
+<p>Now, to set up dependecies, we need to run <code>npm init</code>
+This will ask you some questions, and then write a package.json for you. In the end the package.json looks like this:</p>
+
+<pre><code>{
+  "name": "untitled2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
+</code></pre>
 
-module.exports = Robot;
+<p>dasdasdadasdas
+    class Robot {
+        beep() {
+            console.log("beep");
+            console.log("boop");
+        };
+    }</p>
+
+<pre><code>module.exports = Robot;
 </code></pre>
 
 <p>select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
