@@ -25,13 +25,13 @@
 <p>First of all, let's install <a href="https://www.jetbrains.com/webstorm/">Webstorm</a> Javascript IDE as an editor for our project, which is a very convenient tool for developing js applications and has ES6 syntax support. 
 Next step is to install node.js. As I am a windows user, I have installed it from <a href="https://nodejs.org/en/download/">here</a> and nvm (Node version manager) - from <a href="https://github.com/coreybutler/nvm-windows">here</a>. Note that, first you need to install node and then nvm.</p>
 
-<p>Now, let's create a new blank(empty) project from Webstorm. If we want to check that if node.js is correctly installed, run Webstorm terminal (alt + F12) and check with entering a command node -v and nvm -v. </p>
+<p>Now, let's create a new blank(empty) project from Webstorm. If we want to check that node.js is correctly installed, run Webstorm terminal (alt + F12) and check with entering a command <code>node -v</code> and <code>nvm -v</code>. </p>
 
 <p>Now, to set up dependecies, we need to run <code>npm init</code>
 This will ask you some questions, and then write a package.json for you. In the end the package.json looks like this:</p>
 
 <pre><code>{
-  "name": "untitled2",
+  "name": "speedtyping",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -45,15 +45,19 @@ This will ask you some questions, and then write a package.json for you. In the 
 }
 </code></pre>
 
-<p>dasdasdadasdas
-    class Robot {
-        beep() {
-            console.log("beep");
-            console.log("boop");
-        };
-    }</p>
+<p>The assets must be transpiled and bundled by a modern bundler, so we will use <a href="http://webpack.github.io/">Webpack</a> bundler for this. Webpack combines all javascript files and produces(transpiles) them into one (bundle.js) which can be understood by browsers. It also provides a development server to run the code in development environment. This server watches all files and bundles the project again on every change. To install webpack and webpack development server, run following commands: <code>npm install webpack --save</code> and <code>npm install webpack-dev-server --save</code>. After that you will notice that node_modules folder is generated in the project, which consists of all libraries what is needed for webpack. And also you will notice that two lines(    "webpack": "^1.12.14", "webpack-dev-server": "^1.14.1") to package.json dependecies will be added. Note that, other developers do not need to run commands for webpack installation again once we have them in package.json, all they do is just <code>npm install</code> and webpack will be installed automatically. 
+To run code with npm start, we need to add following line to "scripts" in package.json: "start": "webpack-dev-server".</p>
 
-<pre><code>module.exports = Robot;
+<p>After that we are already able to run a code on the server:</p>
+
+<pre><code>class Robot {
+    beep() {
+        console.log("beep");
+        console.log("boop");
+    };
+}
+
+module.exports = Robot;
 </code></pre>
 
 <p>select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
