@@ -34,7 +34,7 @@ This will ask you some questions, and then write a package.json for you. In the 
   "name": "speedtyping",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
@@ -45,7 +45,9 @@ This will ask you some questions, and then write a package.json for you. In the 
 }
 </code></pre>
 
-<p>The assets must be transpiled and bundled by a modern bundler, so we will use <a href="http://webpack.github.io/">Webpack</a> bundler for this. Webpack combines all javascript files and produces(transpiles) them into one (bundle.js) which can be understood by browsers. It also provides a development server to run the code in development environment. This server watches all files and bundles the project again on every change. To install webpack and webpack development server, run following commands: <code>npm install webpack --save</code> and <code>npm install webpack-dev-server --save</code>. After that you will notice that node_modules folder is generated in the project, which consists of all libraries what is needed for webpack. And also you will notice that two lines(    <code>"webpack": "^1.12.14", "webpack-dev-server": "^1.14.1"</code>) will be added to package.json dependecies. Note that, other developers do not need to run commands for webpack installation again once we have them in package.json, all they do is just <code>npm install</code> and webpack will be installed automatically. 
+<p>The assets must be bundled by a modern bundler, so we will use <a href="http://webpack.github.io/">Webpack</a> bundler for this. Webpack is a module bundler which combines all javascript files and produces them into one (bundle.js) which can be understood by browsers. It also provides a development server to run the code in development environment. This server watches all files and re-bundles the project on every change. </p>
+
+<p>To install webpack and webpack development server, run following commands: <code>npm install webpack --save</code> and <code>npm install webpack-dev-server --save</code>. After that you will notice that node_modules folder is generated in the project, which consists of all libraries what is needed for webpack. And also you will notice that two lines(    <code>"webpack": "^1.12.14", "webpack-dev-server": "^1.14.1"</code>) will be added to package.json dependecies. Note that, other developers do not need to run commands for webpack installation again once we have them in package.json, all they do is just <code>npm install</code> and webpack will be installed automatically. 
 To run the code with npm start, we need to add following line to "scripts" in package.json: <code>"start": "webpack-dev-server"</code>.</p>
 
 <p>After that we already are able to run a code on the server, which displays just the folders and files we have in a project. 
@@ -75,12 +77,11 @@ Now we create three javascript files (in js folder), just to have a simple appli
 module.exports = hello
 </code></pre>
 
-<p>Second one is robot.js which corresponds the class Robot and has a method which prints some text in a console:</p>
+<p>Second one is robot.js which corresponds the class Robot and has a method for printing some text in a console:</p>
 
 <pre><code>class Robot {
     beep() {
         console.log("beep");
-        console.log("boop");
     };
 }
 
@@ -97,9 +98,10 @@ var robot = new Robot();
 robot.beep()
 </code></pre>
 
-<p>To configure webpack, create webpack.config.js file in root folder of the project and put following code: </p>
+<p>Now we already have javascript files, so we need more 'clever' webpack to run the code and transpile it to bundle.js. 
+For that reason, create webpack.config.js file in root folder of the project and put following piece of code: </p>
 
-<p>module.exports = {
+<pre><code>module.exports = {
     entry: './js/main.js',
     output: {
         filename: 'bundle.js'
@@ -107,9 +109,21 @@ robot.beep()
     devServer: {
         port: 3000
     }
-};</p>
+};
+</code></pre>
 
-<p>Now create js folder and main.js </p>
+<p>With that we are telling webpack that it has to take main.js as an entry and bundle.js as an output file and run the server at 3000 port. Also do not forget to write in package.json that the main file is main.js (<code>"main": "js/main.js"</code>).</p>
+
+<p>Run <code>npm start</code> and enter <code>localhost:3000</code> in the browser. You will see "Hello World" there and "beep" in a console. Note that, the assets are rebundled on change to any of javascript files. E.g put <code>console.log("boop");</code> in beep function and after refreshing a page boop will appear in a console.</p>
+
+<p>As we are using classes in javascript, it automatically means that we are using es6 (ECMAScript 2015). Since this language is not supported fully in all browsers, we need a transpiler that takes code in ECMAScript 2015 standard and produces it in the older standard that browsers can run. The great tool for that is <a href="http://babeljs.io/">Babel</a>. To install babel in our project, add following three lines in package.json dependencies and then run <code>npm install</code>:</p>
+
+<pre><code>"babel-cli": "^6.5.1",
+"babel-preset-es2015": "^6.5.0",
+"babelify": "^7.2.0"
+</code></pre>
+
+<p>After that the code has the ES6 support.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
