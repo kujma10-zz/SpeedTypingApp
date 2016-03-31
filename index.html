@@ -120,8 +120,24 @@ For that reason, we create webpack.config.js file in root folder of the project 
 
 <pre><code>"babel-cli": "^6.5.1",
 "babel-preset-es2015": "^6.5.0",
+"babel-loader": "^6.2.1",
+"babel-preset-react": "^6.3.13",
 "babelify": "^7.2.0"
 </code></pre>
+
+<p>We also need to configure babel loader in webpack.config.js file:
+    module: {
+        loaders: [
+            {
+                test: /.js?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
+    }</p>
 
 <p>After that the project has ES6 support.</p>
 
