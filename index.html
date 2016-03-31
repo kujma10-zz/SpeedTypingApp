@@ -143,6 +143,27 @@ For that reason, we create webpack.config.js file in root folder of the project 
 
 <p>After that the project has ES6 support.</p>
 
+<h2>
+<a id="part-2-introduction-to-react-speed-typing-single-player-game" class="anchor" href="#part-2-introduction-to-react-speed-typing-single-player-game" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: Introduction to React, Speed typing single player game</h2>
+
+<p>We will build UI view components using <a href="https://facebook.github.io/react/index.html">React</a> library. To install it put following dependecies in package.json and run <code>npm install</code>:</p>
+
+<pre><code>"react": "^0.14.7",
+"react-dom": "^0.14.7"
+</code></pre>
+
+<p>A view for a single player game consists of:</p>
+
+<ul>
+<li>an area where random words are displayed</li>
+<li>an input for an user</li>
+<li>statistics: words per minute and accuracy</li>
+</ul>
+
+<p>Let's first build a component for statistics, which is very simple and will show main idea of composing multiple components in React.
+We will build 3 components for that; A top-level component logically is Statistics, which consists of two child components, Speed (Words per minute) and Accuracy. First, create components folder in js to have seperate folder for the React components. Then create<br>
+3 javascript files inside it: statistics.js, speed.js, and accuracy.js. Each file corresponds to each component.</p>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
 
