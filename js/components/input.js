@@ -7,8 +7,12 @@ import ReactDOM from 'react-dom';
 
 var InputBox = React.createClass({
 
-    handleInputText: function (e) {
+    getInitialState: function() {
+        return {input: ''};
+    },
 
+    handleInputText: function (e) {
+        this.setState({input: e.target.value});
     },
 
     render: function () {
@@ -17,6 +21,7 @@ var InputBox = React.createClass({
                 <input
                     type="text"
                     placeholder="Type words here"
+                    value={this.state.input}
                     onChange={this.handleInputText}
                 />
             </div>
