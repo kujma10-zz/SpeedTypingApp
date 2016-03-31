@@ -228,6 +228,37 @@ var Statistics = React.createClass({
 export default Statistics;
 </code></pre>
 
+<p>Now we create an input component for an user to type (input.js):</p>
+
+<pre><code>var InputBox = React.createClass({
+
+    getInitialState: function() {
+        return {input: ''};
+    },
+
+    handleInputText: function (e) {
+        this.setState({input: e.target.value});
+    },
+
+    render: function () {
+        return (
+            &lt;div className="inputBox"&gt;
+                &lt;input
+                    type="text"
+                    placeholder="Type words here"
+                    value={this.state.input}
+                    onChange={this.handleInputText}
+                /&gt;
+            &lt;/div&gt;
+        );
+    }
+})
+
+export default InputBox;
+</code></pre>
+
+<p>The html input element property is bound to the state of the input component. On every input change it calls method <code>handleInputText</code>which changes the state of the input.</p>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
 
