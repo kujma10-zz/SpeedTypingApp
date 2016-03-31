@@ -166,6 +166,8 @@ We will build 3 components for that; A top-level component logically is Statisti
 <p>First, create components folder in js to have seperate folder for the React components. Then create<br>
 3 javascript files inside it: <code>statistics.js</code>, <code>speed.js</code>, and <code>accuracy.js</code>. Each file corresponds to each component.</p>
 
+<p>Speed component renders a div which simply displays a string and value of words per minute:</p>
+
 <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -182,8 +184,11 @@ var SpeedComponent = React.createClass({
 })
 
 export default SpeedComponent;
+</code></pre>
 
-import React from 'react';
+<p>Similarly, Accuracy component displays <code>div</code> with string and value of accuracy:</p>
+
+<pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
 
 var AccuracyComponent = React.createClass({
@@ -198,8 +203,11 @@ var AccuracyComponent = React.createClass({
 })
 
 export default AccuracyComponent;
+</code></pre>
 
-import React from 'react';
+<p>Statistics component renders two components we defined above and passes hard-coded property values to them. Note that properties are called props in React; They are immutable and are passed from parent component to children.  </p>
+
+<pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
 import SpeedComponent from  './speed'
 import AccuracyComponent from './accuracy'
