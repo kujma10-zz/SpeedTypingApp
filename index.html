@@ -125,19 +125,21 @@ For that reason, we create webpack.config.js file in root folder of the project 
 "babelify": "^7.2.0"
 </code></pre>
 
-<p>We also need to configure babel loader in webpack.config.js file:
-    module: {
-        loaders: [
-            {
-                test: /.js?$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+<p>We also need to configure babel loader in webpack.config.js file:</p>
+
+<pre><code>module: {
+    loaders: [
+        {
+            test: /.js?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+                presets: ['es2015', 'react']
             }
-        ]
-    }</p>
+        }
+    ]
+}
+</code></pre>
 
 <p>After that the project has ES6 support.</p>
 
