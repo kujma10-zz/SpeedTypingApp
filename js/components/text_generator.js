@@ -3,15 +3,23 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Word from  './word'
+import Word from './word'
 
 var WordsContainer = React.createClass({
 
+
     render: function () {
         var text = data[Math.floor(Math.random() * data.length)];
+        var res = text.split(" ");
+        res.map(function(word) {
+            return (
+                <Word value={word} />
+            )
+        });
+
         return (
             <div className="wordsContainer">
-                <Word content={text}/>
+                {text}
             </div>
         );
     }

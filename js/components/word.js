@@ -5,17 +5,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Word = React.createClass({
 
-    propTypes: {
-        content: React.PropTypes.string.isRequired
-    },
+var Word = React.createClass({
 
     render: function () {
         return (
-
             <div className="word">
-                {this.props.content}
+                {this.props.value}
             </div>
         );
     }
