@@ -161,8 +161,64 @@ For that reason, we create webpack.config.js file in root folder of the project 
 </ul>
 
 <p>Let's first build a component for statistics, which is very simple and will show main idea of composing multiple components in React.
-We will build 3 components for that; A top-level component logically is Statistics, which consists of two child components, Speed (Words per minute) and Accuracy. First, create components folder in js to have seperate folder for the React components. Then create<br>
-3 javascript files inside it: statistics.js, speed.js, and accuracy.js. Each file corresponds to each component.</p>
+We will build 3 components for that; A top-level component logically is Statistics, which consists of two child components, Speed (Words per minute) and Accuracy. </p>
+
+<p>First, create components folder in js to have seperate folder for the React components. Then create<br>
+3 javascript files inside it: <code>statistics.js</code>, <code>speed.js</code>, and <code>accuracy.js</code>. Each file corresponds to each component.</p>
+
+<pre><code>import React from 'react';
+import ReactDOM from 'react-dom';
+
+var SpeedComponent = React.createClass({
+
+    render: function () {
+        return (
+
+            &lt;div className="speed"&gt;
+                Words per minute: {this.props.value}
+            &lt;/div&gt;
+        );
+    }
+})
+
+export default SpeedComponent;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+var AccuracyComponent = React.createClass({
+
+    render: function () {
+        return (
+            &lt;div className="accuracy"&gt;
+                Accuracy: {this.props.value}
+            &lt;/div&gt;
+        );
+    }
+})
+
+export default AccuracyComponent;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SpeedComponent from  './speed'
+import AccuracyComponent from './accuracy'
+
+
+var Statistics = React.createClass({
+
+    render: function () {
+        return (
+            &lt;div className="statistics"&gt;
+                &lt;SpeedComponent value={0}/&gt;
+                &lt;AccuracyComponent value={0}/&gt;
+            &lt;/div&gt;
+        );
+    }
+})
+
+export default Statistics;
+</code></pre>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
