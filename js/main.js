@@ -16,7 +16,9 @@ var GameComponents = React.createClass({
             <div className="gameComponents">
                 <h1>Speed Typing app</h1>
                 <WordsContainer />
+                <br/>
                 <InputBox />
+                <br/>
                 <Statistics />
             </div>
         );

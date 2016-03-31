@@ -7,6 +7,10 @@ import ReactDOM from 'react-dom';
 
 var Word = React.createClass({
 
+    propTypes: {
+        content: React.PropTypes.string.isRequired
+    },
+
     render: function () {
         return (
 

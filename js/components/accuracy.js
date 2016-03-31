@@ -6,6 +6,10 @@ import ReactDOM from 'react-dom';
 
 var AccuracyComponent = React.createClass({
 
+    propTypes: {
+        value: React.PropTypes.number.isRequired
+    },
+
     render: function () {
         return (
             <div className="accuracy">

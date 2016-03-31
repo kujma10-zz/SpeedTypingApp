@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 var InputBox = React.createClass({
 
-    handleInputText: function(e) {
+    handleInputText: function (e) {
 
     },
 

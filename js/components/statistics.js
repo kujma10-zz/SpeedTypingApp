@@ -12,8 +12,8 @@ var Statistics = React.createClass({
     render: function () {
         return (
             <div className="statistics">
-                <SpeedComponent  value ="0.0"/>
-                <AccuracyComponent value="0.0"/>
+                <SpeedComponent value={0}/>
+                <AccuracyComponent value={0}/>
             </div>
         );
     }

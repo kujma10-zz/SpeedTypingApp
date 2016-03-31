@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Word from  './word.js'
+import Word from  './word'
 
 var data = ['Who\'s there? Nay, answer me: stand, and unfold yourself. Long live the king! Bernardo? You come most carefully upon your hour. Tis now struck twelve; get thee to bed, Francisco.',
     'On an exceptionally hot evening early in July a young man came out of the garret in which he lodged in S. Place and walked slowly, as though in hesitation, towards K. bridge. ' +
@@ -14,10 +14,10 @@ var data = ['Who\'s there? Nay, answer me: stand, and unfold yourself. Long live
 var WordsContainer = React.createClass({
 
     render: function () {
-        var rand = data[Math.floor(Math.random() * data.length)];
+        var text = data[Math.floor(Math.random() * data.length)];
         return (
             <div className="wordsContainer">
-                <Word content={rand} />
+                <Word content={text}/>
             </div>
         );
     }
