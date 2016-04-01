@@ -205,7 +205,7 @@ var AccuracyComponent = React.createClass({
 export default AccuracyComponent;
 </code></pre>
 
-<p>Statistics component renders two components we defined above and passes hard-coded property values to them. Note that properties are called props in React; They are immutable and are passed from parent component to children.  </p>
+<p>Statistics component renders two components we defined above and passes hard-coded property values to them. Note that properties are called props in React; They are immutable and are passed from parent component to children.</p>
 
 <pre><code>import React from 'react';
 import ReactDOM from 'react-dom';
@@ -257,7 +257,40 @@ export default Statistics;
 export default InputBox;
 </code></pre>
 
-<p>The html input element property is bound to the state of the input component. On every input change it calls method <code>handleInputText</code>which changes the state of the input.</p>
+<p>The html input element property is bound to the state of the input component. On every input change it calls method <code>handleInputText</code>which changes the state of the input. </p>
+
+<p>Now we can display these 2 main components we have already created. Import these two components into main.js file and render them into main component called <code>GameComponents</code>. </p>
+
+<pre><code>import InputBox from './components/input';
+import Statistics from './components/statistics'
+
+
+var GameComponents = React.createClass({
+    render: function () {
+        return (
+            &lt;div className="gameComponents"&gt;
+                &lt;h1&gt;Speed Typing app&lt;/h1&gt;
+                &lt;InputBox /&gt;
+                &lt;br/&gt;
+                &lt;Statistics /&gt;
+            &lt;/div&gt;
+        );
+    }
+});
+</code></pre>
+
+<p>After that we need to create main game component and put it into div with id content (Don't forget to add this <code>div</code>in <code>index.html</code>)
+Here is the snippet to do this:</p>
+
+<pre><code>ReactDOM.render(
+    React.createElement(GameComponents, null),
+    document.getElementById('content')
+);
+</code></pre>
+
+<p>Now run the app (<code>npm start</code>). You will see that input displayed for an user, where you can type something. You will also see two lines  which displays statistics.</p>
+
+<p>To be continued... (Have not added the part for words content yet, because I think it needs some fixes)</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
