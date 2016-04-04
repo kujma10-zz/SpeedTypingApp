@@ -8,6 +8,10 @@ import ReactDOM from 'react-dom';
 
 var Word = React.createClass({
 
+    propTypes: {
+        value: React.PropTypes.string.isRequired
+    },
+
     render: function () {
         return (
             <div className="word">

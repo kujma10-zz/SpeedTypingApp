@@ -11,15 +11,24 @@ import Statistics from './components/statistics'
 
 
 var GameComponents = React.createClass({
+
+    getDefaultProps: function() {
+        return {
+            words: ["answer", "unfold", "exceptionally", "yourself", "dinners", "struck", "kitchen", "surroundings", "provided"],
+            wpm: 20,
+            accuracy: 10
+        };
+    },
+
     render: function () {
         return (
             <div className="gameComponents">
                 <h1>Speed Typing app</h1>
-                <WordsContainer />
+                <WordsContainer words={this.props.words} />
                 <br/>
                 <InputBox />
                 <br/>
-                <Statistics />
+                <Statistics wpm={this.props.wpm} accuracy={this.props.accuracy}/>
             </div>
         );
     }
