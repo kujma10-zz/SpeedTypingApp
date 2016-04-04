@@ -314,11 +314,11 @@ Here is the snippet to do this:</p>
 })
 </code></pre>
 
-<p>The word component is separated into Words.js file, which is just responsible to render the word taken from the parent:</p>
+<p>The word component is separated into <code>Words.js</code> file, which is just responsible to render the word taken from the parent:</p>
 
-<p>var Word = React.createClass({</p>
+<pre><code>var Word = React.createClass({
 
-<pre><code>    render: function () {
+    render: function () {
         return (
             &lt;div className="word"&gt;
                 {this.props.value}
@@ -329,6 +329,16 @@ Here is the snippet to do this:</p>
 </code></pre>
 
 <p>The last step for displaying words is to add random words array in root component and pass it to the <code>WordsContainer</code> component. So we add following line in<code>getDefaultProps()</code>:  <code>words: ["answer", "unfold", "exceptionally", "yourself", "dinners", "struck", "kitchen", "surroundings", "provided"]</code> and following line in <code>render</code> function result: <code>&lt;WordsContainer words={this.props.words} /&gt;</code></p>
+
+<p>After running the project random words are also displayed on the screen. The last thing we need to add is property validations. The validations are done only in development mode and can be seen in browser debugger.
+An example for a property validadion of the word property is shown below: </p>
+
+<pre><code>propTypes: {
+    value: React.PropTypes.string.isRequired
+}
+</code></pre>
+
+<p>In this case we require String as a type of the word. Similarly we add validations for Accuracy and WPM (numbers) and for a words container (array).</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kujma10/SpeedTypingApp">SpeedTyping</a> is maintained by <a href="https://github.com/kujma10">kujma10</a>.</span>
