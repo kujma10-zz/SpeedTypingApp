@@ -5,9 +5,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import InputBox from './components/input';
-import WordsContainer from './components/text_generator';
-import Statistics from './components/statistics'
+import InputBox from './components/Input';
+import WordsContainer from './components/WordsContainer';
+import Statistics from './components/Statistics'
 
 
 var GameComponents = React.createClass({

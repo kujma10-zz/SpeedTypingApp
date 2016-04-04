@@ -6,19 +6,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-var Word = React.createClass({
+    var Word = React.createClass({
 
-    propTypes: {
-        value: React.PropTypes.string.isRequired
-    },
+        propTypes: {
+            value: React.PropTypes.string.isRequired
+        },
 
-    render: function () {
-        return (
-            <div className="word">
-                {this.props.value}
-            </div>
-        );
-    }
-})
+        render: function () {
+            return (
+                <div className="word">
+                    {this.props.value}
+                </div>
+            );
+        }
+    })
 
 export default Word;

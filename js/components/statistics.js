@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SpeedComponent from  './speed'
-import AccuracyComponent from './accuracy'
+import SpeedComponent from  './Speed'
+import AccuracyComponent from './Accuracy'
 
 
 var Statistics = React.createClass({
