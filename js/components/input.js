@@ -13,6 +13,7 @@ var InputBox = React.createClass({
 
     handleInputText: function (e) {
         this.setState({input: e.target.value});
+        this.props.checkInput(e.target.value)
     },
 
     render: function () {
