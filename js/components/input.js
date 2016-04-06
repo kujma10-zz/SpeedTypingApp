@@ -13,13 +13,19 @@ var InputBox = React.createClass({
 
     handleInputText: function (e) {
         this.setState({input: e.target.value});
-        this.props.checkInput(e.target.value)
+
+        var key = e.keyCode || e.charCode;
+
+        if( key == 8){
+            console.log("asdsa")
+        }
+        this.props.checkInput(e.target.value);
     },
 
     render: function () {
         return (
             <div className="inputBox">
-                <input
+                <input autoFocus
                     type="text"
                     placeholder="Type words here"
                     value={this.state.input}

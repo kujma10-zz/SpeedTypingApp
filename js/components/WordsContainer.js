@@ -5,19 +5,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Word from './Word'
 
-    var WordsContainer = React.createClass({
+var WordsContainer = React.createClass({
 
-        propTypes: {
-            words: React.PropTypes.array.isRequired
-        },
+    propTypes: {
+        words: React.PropTypes.array.isRequired
+    },
 
-        render: function () {
-            return(
-                <div className="words">
-                    {this.props.words.map((word) => { return <Word key={word} value={word} />; })}
-                </div>
-            );
-        }
-    })
+    render: function () {
+        return (
+            <div className="words">
+                {this.props.words.map((word) => {
+                    return <Word key={word.id} value={word.content} status={word.status} letters={word.letters}/>;
+                })}
+            </div>
+        );
+    }
+})
 
 export default WordsContainer;

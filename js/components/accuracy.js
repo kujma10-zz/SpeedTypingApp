@@ -13,10 +13,12 @@ var AccuracyComponent = React.createClass({
     render: function () {
         return (
             <div className="accuracy">
-                Accuracy: {this.props.value}
+                Accuracy: {this.props.value}%
             </div>
         );
     }
+
+
 })
 
 export default AccuracyComponent;

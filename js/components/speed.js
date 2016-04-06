@@ -10,14 +10,15 @@ var SpeedComponent = React.createClass({
         value: React.PropTypes.number.isRequired
     },
 
+
     render: function () {
         return (
-
             <div className="speed">
                 Words per minute: {this.props.value}
             </div>
         );
     }
+
 })
 
 export default SpeedComponent;
