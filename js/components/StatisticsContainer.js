@@ -9,7 +9,10 @@ import AccuracyComponent from './Accuracy'
 
 var Statistics = React.createClass({
 
-    //TODO validate
+    propTypes: {
+        words: React.PropTypes.array.isRequired
+    },
+
 
     calculateSpeed : function(){
         var completedWords = 0;

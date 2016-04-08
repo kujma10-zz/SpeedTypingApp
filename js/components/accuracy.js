@@ -4,21 +4,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var AccuracyComponent = React.createClass({
+const AccuracyComponent = (props) => {
 
-    propTypes: {
-        value: React.PropTypes.number.isRequired
-    },
+    return (
+        <div className="accuracy">
+            Accuracy: {props.value}%
+        </div>
+    );
 
-    render: function () {
-        return (
-            <div className="accuracy">
-                Accuracy: {this.props.value}%
-            </div>
-        );
-    }
+}
 
-
-})
+AccuracyComponent.propTypes = {
+    value: React.PropTypes.number.isRequired
+}
 
 export default AccuracyComponent;

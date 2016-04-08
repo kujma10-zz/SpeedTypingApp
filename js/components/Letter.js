@@ -5,20 +5,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const Letter = (props) => {
 
-var Letter = React.createClass({
+    return (
+        <span className={props.status + " letter"}>
+            {props.value}
+        </span>
+    );
 
-    propTypes: {
-        value: React.PropTypes.string.isRequired
-    },
+}
 
-    render: function () {
-        return (
-            <span className={this.props.status}>
-                {this.props.value}
-            </span>
-        );
-    }
-})
+Letter.propTypes = {
+    id: React.PropTypes.number.isRequired,
+    value: React.PropTypes.string.isRequired,
+    status: React.PropTypes.string.isRequired
+}
 
 export default Letter;

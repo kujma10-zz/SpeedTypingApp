@@ -6,31 +6,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Letter from './Letter'
 
-var Word = React.createClass({
+var Word = (props) => {
 
-    propTypes: {
-        value: React.PropTypes.string.isRequired
-    },
-
-    render: function () {
-            // TODO avoid if
-            if(this.props.status == "active"){
-                return (
-                    <div className={this.props.status + " word"}>
-                        {this.props.letters.map((letter) => {
-                            return <Letter key={letter.id} value={letter.content} status={letter.status} />;
-                        })}
-                    </div>
-                );
-            } else {
-                return (
-                    <div className={this.props.status + " word"}>
-                        {this.props.value}
-                    </div>
-                );
-            }
-
+    if (props.status == "active") {
+        return (
+            <div className={props.status + " word"}>
+                {props.letters.map((letter) => {
+                    return <Letter key={letter.id} value={letter.content} status={letter.status}/>;
+                })}
+            </div>
+        );
+    } else {
+        return (
+            <div className={props.status + " word"}>
+                {props.value}
+            </div>
+        );
     }
-})
+
+}
+
+Word.propTypes = {
+    id: React.PropTypes.number.isRequired,
+    value: React.PropTypes.string.isRequired,
+    status: React.PropTypes.string.isRequired,
+    letters: React.PropTypes.array.isRequired
+}
 
 export default Word;

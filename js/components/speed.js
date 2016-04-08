@@ -4,21 +4,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var SpeedComponent = React.createClass({
+const SpeedComponent = (props) => {
 
-    propTypes: {
-        value: React.PropTypes.number.isRequired
-    },
+    return (
+        <div className="speed">
+            Words per minute: {props.value}
+        </div>
+    );
 
+}
 
-    render: function () {
-        return (
-            <div className="speed">
-                Words per minute: {this.props.value}
-            </div>
-        );
-    }
+SpeedComponent.propTypes = {
+    value: React.PropTypes.number.isRequired
+}
 
-})
-
-export default SpeedComponent;
+export {SpeedComponent as default};

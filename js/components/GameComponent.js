@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import InputBox from './Input';
+import InputContainer from './InputContainer';
 import WordsContainer from './WordsContainer';
 import Statistics from './StatisticsContainer'
 
@@ -12,7 +12,7 @@ var GameComponent = React.createClass({
 
     getDefaultProps: function() {
         return {
-            words: ["answer", "unfold", "exceptionally", "yourself", "dinners", "struck", "kitchen", "surroundings", "provided"],
+            words: ["answer", "unfold", "exceptionally", "yourself", "dinners", "struck", "kitchen", "surroundings", "provided", "game", "homework", "deadline", "is", "near"],
             wpm: 20,
             accuracy: 10
         };
@@ -21,6 +21,7 @@ var GameComponent = React.createClass({
     getInitialState : function() {
         return {
             words: this.initWords(),
+            currentWord: this.props.words[0],
             elapsed: 0
         };
     },
@@ -38,6 +39,7 @@ var GameComponent = React.createClass({
     },
 
     initWords: function(){
+        // TODO make status type enum ?
         var words = [];
         for (var i in this.props.words) {
             var word =  this.props.words[i];
@@ -55,37 +57,18 @@ var GameComponent = React.createClass({
         return letters;
     },
 
-    checkInput(input){
-        var lastChar = input.substr(input.length - 1);
-        var inputWords = input.split(" ");
-
-        //TODO check backspace
-        //TODO enum type status ?
-        if(lastChar == ' '){
-            var lastEnteredWord = inputWords[inputWords.length-2];
-            if (lastEnteredWord == this.state.words[currentWordIndex].content){
-                this.updateWordStatus("correct");
-            } else {
-                this.updateWordStatus("incorrect");
-            }
-        } else {
-            var lastEnteredWord = inputWords[inputWords.length-1];
-            var currentChar = this.state.words[currentWordIndex].content.substr(lastEnteredWord.length-1, 1);
-            if(currentChar==lastChar){
-                this.updateLetterStatus("correct", lastEnteredWord.length-1);
-            } else {
-                this.updateLetterStatus("incorrect", lastEnteredWord.length-1);
-            }
-        }
-    },
-
     updateWordStatus: function (status){
         var words = this.state.words;
         words[currentWordIndex].status = status;
         // move to next word
         currentWordIndex++;
-        words[currentWordIndex].status = "active";
-        this.setState({words : words});
+        if(currentWordIndex < words.length) {
+            words[currentWordIndex].status = "active";
+            this.setState({words: words});
+            this.setState({currentWord: words[currentWordIndex].content})
+        } else {
+            //TODO handle game over or give more words
+        }
     },
 
     updateLetterStatus: function(status, index) {
@@ -97,10 +80,10 @@ var GameComponent = React.createClass({
     render: function () {
         return (
             <div className="gameComponents">
-                <h1>Speed Typing app</h1>
+                <h1>Speed Typing</h1>
                 <WordsContainer words={this.state.words} />
                 <br/>
-                <InputBox checkInput={this.checkInput} />
+                <InputContainer currentWord={this.state.currentWord} updateWordStatus={this.updateWordStatus} updateLetterStatus={this.updateLetterStatus} />
                 <br/>
                 <Statistics elapsed={this.state.elapsed} words={this.state.words} />
             </div>
