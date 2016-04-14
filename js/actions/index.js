@@ -2,10 +2,10 @@
  * Created by Kote on 4/13/2016.
  */
 
-export const moveToNextWord = (pastInput) => {
+export const moveToNextWord = (currentInput) => {
     return {
         type: "MOVE_TO_NEXT_WORD",
-        payload: pastInput
+        payload: currentInput
     }
 }
 
