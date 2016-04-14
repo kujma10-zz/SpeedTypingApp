@@ -1,24 +1,14 @@
-/**
- * Created by Kote on 4/6/2016.
- */
-
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const Letter = (props) => {
-
-    return (
-        <span className={props.status + " letter"}>
-            {props.value}
-        </span>
-    );
-
-}
+  return(
+    <div className={"letter " + props.color}>{props.children}</div>
+  );
+};
 
 Letter.propTypes = {
-    id: React.PropTypes.number.isRequired,
-    value: React.PropTypes.string.isRequired,
-    status: React.PropTypes.string.isRequired
-}
+  color: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired
+};
 
-export default Letter;
+export { Letter as default };

@@ -1,14 +1,17 @@
-/**
- * Created by Kote on 3/15/2016.
- */
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import GameComponent from './components/GameComponent'
+import React from "react";
+import ReactDOM from "react-dom";
+import SpeedTyperContainer from "./containers/SpeedTyperContainer";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import speedTyperReducer from './reducers'
+let store = createStore(speedTyperReducer)
 
 ReactDOM.render(
-    React.createElement(GameComponent, null),
+    <Provider store={store}>
+        <SpeedTyperContainer />
+    </Provider>,
     document.getElementById('content')
 );
+
+store.subscribe(() => console.log(store.getState()) )
 
