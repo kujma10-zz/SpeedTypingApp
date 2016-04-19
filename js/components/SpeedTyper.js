@@ -2,6 +2,8 @@ import React from "react";
 import WordsContainer from "./../containers/WordsContainer";
 import TypingContainer from "./../containers/TypingContainer";
 import StatsContainer from "./../containers/StatsContainer";
+import StartButtonContainer from "./../containers/StartButtonContainer"
+import StopButtonContainer from "./../containers/StopButtonContainer"
 
 const SpeedTyper = (props) => {
   return (
@@ -11,6 +13,8 @@ const SpeedTyper = (props) => {
           <WordsContainer />
           <TypingContainer />
         </div>
+        <StartButtonContainer/>
+        <StopButtonContainer/>
       </div>
   );
 };

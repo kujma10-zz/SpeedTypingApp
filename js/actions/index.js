@@ -4,3 +4,15 @@ export const setCurrentInput = (currentInput) => {
         payload: { currentInput: currentInput }
     }
 }
+
+export const startGame = () => {
+    return {
+        type: "START_GAME"
+    }
+}
+
+export const stopGame = () => {
+    return {
+        type: "STOP_GAME"
+    }
+}
