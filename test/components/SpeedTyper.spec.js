@@ -10,16 +10,10 @@ import StatsContainer from "../../js/containers/StatsContainer";
 
 describe('SpeedTyper', () => {
 
-  var currentInput="current"
-  var onUserInput=function(){}
-
-  var buildSpeedTyper = ((children) => {
+  var buildSpeedTyper = (() => {
     let renderer = TestUtils.createRenderer();
     renderer.render(
-      <SpeedTyper
-        currentInput={currentInput}
-        onUserInput={onUserInput}
-      />
+      <SpeedTyper />
     );
     return renderer.getRenderOutput();
   });
@@ -28,24 +22,20 @@ describe('SpeedTyper', () => {
     let speedTyper = buildSpeedTyper("green");
     let wordsBox = speedTyper.props.children
     let statsContainer = wordsBox.props.children[0]
-    expect(statsContainer.type).to.equal(StatsContainer);
+    expect(statsContainer.type).to.eq(StatsContainer);
   });
 
   it('renders the words container', () => {
     let speedTyper = buildSpeedTyper("green");
     let wordsBox = speedTyper.props.children
     let wordsContainer = wordsBox.props.children[1]
-    expect(wordsContainer.type).to.equal(WordsContainer);
+    expect(wordsContainer.type).to.eq(WordsContainer);
   });
 
   it('renders the typing container', () => {
     let speedTyper = buildSpeedTyper("green");
     let wordsBox = speedTyper.props.children
     let typingContainer = wordsBox.props.children[2]
-    expect(typingContainer.type).to.equal(TypingContainer);
-    expect(typingContainer.props).to.eql({
-      currentInput: currentInput,
-      onUserInput: onUserInput
-    });
+    expect(typingContainer.type).to.eq(TypingContainer);
   });
 });

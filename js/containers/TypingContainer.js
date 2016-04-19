@@ -1,24 +1,18 @@
 import React from "react";
+import Typing from '../components/Typing';
+import { setCurrentInput } from '../actions';
+import { connect } from 'react-redux'
 
-const TypingContainer = (props) => {
-
-    const handleUserInput = (event) => {
-        props.onUserInput(event.target.value)
+const mapStateToProps = (state) => {
+    return {
+        currentInput: state.currentInput
     }
-
-    return (
-        <input
-            className="typing-container"
-            value={props.currentInput}
-            onChange={handleUserInput}
-        />
-    );
-
 };
 
-TypingContainer.propTypes = {
-    onUserInput: React.PropTypes.func.isRequired,
-    currentInput: React.PropTypes.string.isRequired,
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onUserInput: (currentInput) => dispatch(setCurrentInput(currentInput))
+    }
 };
 
-export { TypingContainer as default };
+export default connect(mapStateToProps, mapDispatchToProps)(Typing);

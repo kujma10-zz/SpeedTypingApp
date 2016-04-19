@@ -15,23 +15,22 @@ const initialState = {
     words: words
 }
 
-export const speedTyperReducer = (state = initialState, action) => {
+const merge = (obj1, obj2) => Object.assign({}, obj1, obj2)
+
+const speedTyperReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'MOVE_TO_NEXT_WORD':
-            const pastInput = state.pastInput;
-            const newPastInput = pastInput.concat(action.payload.trim());
-            return {currentInput: "", pastInput: newPastInput, words: state.words, startTime: state.startTime};
-        case 'UPDATE_CURRENT_INPUT':
-            return {
-                currentInput: action.payload,
-                pastInput: state.pastInput,
-                words: state.words,
-                startTime: state.startTime
+        case 'SET_CURRENT_INPUT':
+            const currentInput = action.payload.currentInput;
+            if (currentInput.trim().length > 0 && currentInput[currentInput.length - 1] === " "){
+                const newPastInput = state.pastInput.concat(currentInput.trim());
+                return merge(state,  {currentInput: "", pastInput: newPastInput });
+            }else{
+                return merge(state, {currentInput: currentInput });
             }
         default:
-            return state
+            return state;
     }
-};
+}
 
 export function calculateWordsPerMinute(state) {
     let now = Math.floor(Date.now() / 1000)
@@ -50,3 +49,5 @@ export function calculateAccuracy(state) {
     });
     return (matchingWords / state.pastInput.length * 100).toFixed(0);
 };
+
+export default speedTyperReducer;

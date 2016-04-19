@@ -5,24 +5,14 @@ import StatsContainer from "./../containers/StatsContainer";
 
 const SpeedTyper = (props) => {
   return (
-    <div className="SpeedTyper">
-      <div className="wordsbox">
-        <StatsContainer
-        />
-        <WordsContainer
-        />
-        <TypingContainer
-          currentInput={props.currentInput}
-          onUserInput={props.onUserInput}
-        />
+      <div className="SpeedTyper">
+        <div className="wordsbox">
+          <StatsContainer />
+          <WordsContainer />
+          <TypingContainer />
+        </div>
       </div>
-    </div>
   );
-};
-
-SpeedTyper.propTypes = {
-  currentInput: React.PropTypes.string.isRequired,
-  onUserInput: React.PropTypes.func.isRequired
 };
 
 export { SpeedTyper as default };
