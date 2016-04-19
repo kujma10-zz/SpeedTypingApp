@@ -8,13 +8,17 @@ const initialPastInput = [];
 const words = ["does", "short", "unit", "air", "our", "find", "war", "morning", "they"];
 const startTime = Math.floor(Date.now() / 1000);
 const gameInProgress = false;
+const elapsed = 0;
+const timerId = null;
 
 const initialState = {
     currentInput: initialCurrentInput,
     pastInput: initialPastInput,
     startTime: startTime,
     words: words,
-    gameInProgress: gameInProgress
+    gameInProgress: gameInProgress,
+    elapsed: elapsed,
+    timerId: timerId
 }
 
 const merge = (obj1, obj2) => Object.assign({}, obj1, obj2)
@@ -30,9 +34,11 @@ const speedTyperReducer = (state = initialState, action) => {
                 return merge(state, {currentInput: currentInput});
             }
         case 'START_GAME':
-            return merge(state, {gameInProgress: true});
+            return merge(state, {gameInProgress: true, timerId: action.payload.timerId});
         case 'STOP_GAME':
-            return merge(state, {gameInProgress: false});
+            return merge(state, {gameInProgress: false, timerId: null});
+        case 'TICK':
+            return merge(state, {elapsed: state.elapsed + 1});
         default:
             return state;
     }
