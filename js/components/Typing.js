@@ -7,6 +7,7 @@ const Typing = (props) => {
     <input
       className="typing-container"
       value={props.currentInput}
+      disabled={!props.gameInProgress}
       onChange={handleUserInput}
     />
   );
@@ -14,7 +15,8 @@ const Typing = (props) => {
 
 Typing.propTypes = {
   onUserInput: React.PropTypes.func.isRequired,
-  currentInput: React.PropTypes.string.isRequired
+  currentInput: React.PropTypes.string.isRequired,
+  gameInProgress: React.PropTypes.bool.isRequired
 };
 
 export default Typing;

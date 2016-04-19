@@ -8,7 +8,7 @@ const StartButton = (props) => {
 
     return (
         <button
-            disabled={props.gameInProgress}
+            hidden={props.gameInProgress}
             className="start-button"
             onClick={handleStartButton}>
             Start

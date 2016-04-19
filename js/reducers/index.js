@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 const initialCurrentInput = '';
 const initialPastInput = [];
 const words = ["does", "short", "unit", "air", "our", "find", "war", "morning", "they"];
-const startTime = Math.floor(Date.now() / 1000);
+
 const gameInProgress = false;
 const elapsed = 0;
 const timerId = null;
@@ -14,7 +14,7 @@ const timerId = null;
 const initialState = {
     currentInput: initialCurrentInput,
     pastInput: initialPastInput,
-    startTime: startTime,
+
     words: words,
     gameInProgress: gameInProgress,
     elapsed: elapsed,
@@ -34,7 +34,7 @@ const speedTyperReducer = (state = initialState, action) => {
                 return merge(state, {currentInput: currentInput});
             }
         case 'START_GAME':
-            return merge(state, {gameInProgress: true, timerId: action.payload.timerId});
+            return merge(initialState, {gameInProgress: true, timerId: action.payload.timerId});
         case 'STOP_GAME':
             return merge(state, {gameInProgress: false, timerId: null});
         case 'TICK':
@@ -44,11 +44,8 @@ const speedTyperReducer = (state = initialState, action) => {
     }
 }
 
-
 export function calculateWordsPerMinute(state) {
-    let now = Math.floor(Date.now() / 1000)
-    let minutesPassed = (now - state.startTime) / 60;
-    return (state.pastInput.length / minutesPassed).toFixed(2);
+    return (state.pastInput.length / (state.elapsed / 60)).toFixed(2);
 }
 
 export function calculateAccuracy(state) {
