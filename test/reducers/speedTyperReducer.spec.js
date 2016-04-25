@@ -81,7 +81,7 @@ describe('speedTyperReducer', () => {
     describe('Words per minute high score', () => {
 
       it('should update best wpm if current wpm is higher than previous one', () => {
-        const result = speedTyperReducer({words: ["word1", "word2"], elapsed: 2, pastInput: ["word1", "word3"], bestWordsPerMinute: 30}, {
+        const result = speedTyperReducer({words: ["word1", "word2"], elapsed: 2, pastInput: ["word1", "word2"], bestWordsPerMinute: 30}, {
           type: 'STOP_GAME',
           payload: { timerId: null }
         })
