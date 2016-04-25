@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return {
-        elapsed: state.elapsed
+        elapsed: state.game.elapsed
     }
 };
 

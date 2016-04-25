@@ -9,7 +9,8 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return {
-        gameInProgress: state.gameInProgress
+        gameInProgress: state.game.gameInProgress,
+        wordsFetched: state.game.wordsFetched
     }
 };
 

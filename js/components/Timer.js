@@ -5,7 +5,7 @@ import React from "react";
 
 const Timer = (props) => {
     return (
-        <div className="TimerContainer">
+        <div className="timer">
             <div className="TimerDiv">Elapsed time: </div>
             <div className="TimerDiv">{props.elapsed}</div>
         </div>

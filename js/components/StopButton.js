@@ -7,12 +7,14 @@ const StopButton = (props) => {
     const handleStopButton = (event) => props.onStopButtonClick();
 
     return (
-        <button
-            hidden={!props.gameInProgress}
-            className="stop-button"
-            onClick={handleStopButton}>
-            Stop
-        </button>
+        <div className="stop-button">
+            <button
+                hidden={!props.gameInProgress}
+                onClick={handleStopButton}>
+                Stop
+            </button>
+        </div>
+
 
     );
 };

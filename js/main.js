@@ -14,6 +14,5 @@ ReactDOM.render(
     document.getElementById('content')
 );
 
-store.subscribe(() => console.log(store.getState()))
 
 

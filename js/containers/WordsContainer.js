@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return {
-        words: state.words,
-        currentInput: state.currentInput,
-        pastInput: state.pastInput
+        words: state.game.words,
+        currentInput: state.game.currentInput,
+        pastInput: state.game.pastInput
     }
 }
 

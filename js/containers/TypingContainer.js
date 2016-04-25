@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
     return {
-        currentInput: state.currentInput,
-        gameInProgress: state.gameInProgress
+        currentInput: state.game.currentInput,
+        gameInProgress: state.game.gameInProgress
     }
 };
 

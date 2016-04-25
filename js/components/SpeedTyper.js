@@ -5,6 +5,7 @@ import StatsContainer from "./../containers/StatsContainer";
 import StartButtonContainer from "./../containers/StartButtonContainer"
 import StopButtonContainer from "./../containers/StopButtonContainer"
 import TimerContainer from "./../containers/TimerContainer"
+import WordsFetcherContainer from "./../containers/WordsFetcherContainer"
 
 const SpeedTyper = (props) => {
     return (
@@ -17,6 +18,7 @@ const SpeedTyper = (props) => {
             </div>
             <StartButtonContainer/>
             <StopButtonContainer/>
+            <WordsFetcherContainer/>
         </div>
     );
 };

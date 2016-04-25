@@ -7,12 +7,14 @@ const StartButton = (props) => {
     const handleStartButton = (event) => props.onStartButtonClick();
 
     return (
-        <button
-            hidden={props.gameInProgress}
-            className="start-button"
-            onClick={handleStartButton}>
-            Start
-        </button>
+        <div className="start-button">
+            <button
+                hidden={props.gameInProgress}
+                disabled={!props.wordsFetched}
+                onClick={handleStartButton}>
+                Start
+            </button>
+        </div>
 
     );
 };
@@ -20,6 +22,7 @@ const StartButton = (props) => {
 StartButton.propTypes = {
     onStartButtonClick: React.PropTypes.func.isRequired,
     gameInProgress: React.PropTypes.bool.isRequired,
+    wordsFetched: React.PropTypes.bool.isRequired
 };
 
 export default StartButton;
