@@ -12,7 +12,8 @@
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1",
     "ramda": "^0.21.0",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "websocket": "^1.0.22"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
@@ -22,6 +23,7 @@
     "babel-preset-react": "^6.5.0",
     "exorcist": "^0.4.0",
     "memo-is": "0.0.2",
+    "karma-webpack": "^1.7.0",
     "react-addons-test-utils": "^0.14.8",
     "chai": "^3.5.0",
     "jsdom": "^8.2.0",
@@ -33,7 +35,7 @@
   "scripts": {
     "test": "mocha",
     "test-debug": "mocha --debug-brk",
-    "start": "webpack-dev-server"
+    "start": "node server.js"
   },
   "keywords": [
     "react",
