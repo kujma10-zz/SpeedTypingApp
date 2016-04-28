@@ -19,7 +19,6 @@ const SpeedTyper = (props) => {
                 <TypingContainer />
             </div>
             <StartButtonContainer/>
-            <StopButtonContainer/>
             <WordsFetcherContainer/>
         </div>
     );

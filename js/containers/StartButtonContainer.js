@@ -5,6 +5,7 @@
 import React from "react";
 import StartButton from '../components/StartButton';
 import { startGame } from '../actions';
+import { stopGame } from '../actions';
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
@@ -16,7 +17,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onStartButtonClick: () => dispatch(startGame())
+        onStartButtonClick: () => dispatch(startGame()),
+        onStopButtonClick: () => dispatch(stopGame())
     }
 };
 
