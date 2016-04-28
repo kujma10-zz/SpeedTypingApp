@@ -2,15 +2,11 @@ import R from 'ramda'
 
 const initialState = {
     game: {
-        currentInput: '',
         pastInput: [],
         words: [],
         gameInProgress: false,
-        elapsed: 0,
-        timerId: null,
         bestWordsPerMinute: 0,
         bestAccuracy: 0,
-        wordsFetched: false
     }
 }
 

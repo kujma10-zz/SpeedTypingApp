@@ -62,22 +62,18 @@ describe('Websocket actions', () => {
     })
 
     const mockGame = {
-        currentInput: 'input',
         pastInput: ["w1","w2"],
         words: ["w1", "w2", "w3"],
         gameInProgress: true,
-        elapsed: 10,
-        timerId: 1,
         bestWordsPerMinute: 0,
-        bestAccuracy: 0,
-        wordsFetched: true
+        bestAccuracy: 0
     }
 
     describe("receiving websocket messages", () => {
         beforeEach(() => websocketConnectionRequested()(dispatch, getState))
 
         it("interprets incoming message as remote player game", () => {
-            mockServer.send('{"currentInput":"input","pastInput":["w1","w2"],"words":["w1", "w2", "w3"],"gameInProgress":true,"elapsed":10,"timerId":1,"bestWordsPerMinute":0,"bestAccuracy":0,"wordsFetched":true}')
+            mockServer.send('{"pastInput":["w1","w2"],"words":["w1", "w2", "w3"],"gameInProgress":true,"bestWordsPerMinute":0,"bestAccuracy":0}')
             expect(dispatch).to.have.been.calledWith({
                 type: 'RECEIVED_REMOTE_PLAYER_GAME',
                 payload: {game: mockGame}

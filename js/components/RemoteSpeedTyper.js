@@ -10,8 +10,8 @@ const RemoteSpeedTyper = (props) => {
 
         return (
             <div className="RemoteSpeedTyper">
+                <h1> Remote Player </h1>
                 <div className="wordsbox">
-                    <h1> Remote Player </h1>
                     <RemoteStatsContainer />
                     <RemoteWordsContainer />
                 </div>
