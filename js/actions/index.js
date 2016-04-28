@@ -3,7 +3,7 @@ import ajaxRequest from './AjaxRequest'
 export const setCurrentInput = (currentInput) => {
     return {
         type: "SET_CURRENT_INPUT",
-        payload: { currentInput: currentInput }
+        payload: {currentInput: currentInput}
     }
 }
 
@@ -14,7 +14,7 @@ export const startGame = () => {
             const timerId = setInterval(() => {
                 dispatch({type: "TICK"})
             }, 1000)
-            dispatch({type: "START_GAME", payload: {timerId : timerId}})
+            dispatch({type: "START_GAME", payload: {timerId: timerId}})
         }
     }
 }
@@ -24,12 +24,10 @@ export const stopGame = () => {
         const { timerId } = getState().game;
         if (timerId !== null) {
             clearInterval(timerId)
-            dispatch({type: "STOP_GAME", payload: {timerId : timerId}})
+            dispatch({type: "STOP_GAME", payload: {timerId: timerId}})
         }
     }
 }
-
-
 
 export const fetchWords = () => {
     return (dispatch, getState) => {
@@ -59,5 +57,12 @@ export const stopWordsFetch = () => {
     return {
         type: "WORDS_FETCH_STOPPED",
         payload: {}
+    }
+}
+
+export const receivedRemotePlayerGame = (game) => {
+    return {
+        type: "RECEIVED_REMOTE_PLAYER_GAME",
+        payload: {game: game}
     }
 }

@@ -7,6 +7,8 @@ import StopButtonContainer from "./../containers/StopButtonContainer"
 import TimerContainer from "./../containers/TimerContainer"
 import WordsFetcherContainer from "./../containers/WordsFetcherContainer"
 
+import RemoteSpeedTyper from "./RemoteSpeedTyper";
+
 const SpeedTyper = (props) => {
     return (
         <div className="SpeedTyper">

@@ -62,7 +62,6 @@ const reducer = (state = initialState, action) => {
     }
 }
 
-
 export function calculateWordsPerMinute(state) {
     let wpm = numberOfCorrectWords(state) / (state.elapsed / 60);
     return Math.round(wpm * 100) / 100;
@@ -71,9 +70,9 @@ export function calculateWordsPerMinute(state) {
 export function calculateAccuracy(state) {
     let accuracy = numberOfCorrectWords(state) / state.pastInput.length * 100;
     return Math.round(accuracy);
-};
+}
 
-function numberOfCorrectWords(state){
+function numberOfCorrectWords(state) {
     let pastWordsForComparing = R.slice(0, state.pastInput.length, state.words);
     let countMatches = R.pipe(R.zipWith(R.equals), R.filter(R.identity), R.length);
     return countMatches(pastWordsForComparing, state.pastInput)
