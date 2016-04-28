@@ -13,7 +13,8 @@ import {renderWithWrapperAndFind} from '../Wrapper';
 const defaultProps = {
     onFetch: sinon.stub(),
     onCancel: sinon.stub(),
-    inProgress: false
+    inProgress: false,
+    wordsFetched: false
 }
 
 var buildFetcher = ((props) => {

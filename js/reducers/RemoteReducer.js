@@ -17,7 +17,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'RECEIVED_REMOTE_PLAYER_GAME':
-            debugger
             return R.merge(state, {game: action.payload.game})
         default:
             return state

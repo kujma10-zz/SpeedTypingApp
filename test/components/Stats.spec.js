@@ -16,10 +16,10 @@ describe('Stats', () => {
   });
 
   it('displays the stats', () => {
-    let stats = buildStats("100", "60");
+    let stats = buildStats(100, 60);
     let wordsPerMinute = stats.props.children[1];
     let accuracy = stats.props.children[3];
-    expect(wordsPerMinute.props.children).to.eq("60");
-    expect(accuracy.props.children).to.deep.eq(["100", "%"]);
+    expect(wordsPerMinute.props.children).to.eq(60);
+    expect(accuracy.props.children).to.deep.eq([100, "%"]);
   });
 });

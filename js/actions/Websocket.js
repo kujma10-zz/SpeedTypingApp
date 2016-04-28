@@ -28,19 +28,14 @@ export const websocketConnectionRequested = () => {
                 const action = receivedRemotePlayerGame(parsedMessage)
                 dispatch(action)
             } catch (error) {
-                console.log("error parsing websocket message", message.data)
+
             }
-            console.log("received from websocket", parsedMessage)
         }
     };
 }
 
-// This should not be used directly in containers.
-// It is impure and is not an action.
-// Other action creators should import this and wrap with the domain action
 export const sendWebsocketMessage = (message) => {
     try {
-        console.log("Sending message to websocket", message)
         websocketConnection.send(JSON.stringify(message))
     } catch (error) {
         console.error("Cannot stringify websocket message", error, message)
@@ -48,7 +43,6 @@ export const sendWebsocketMessage = (message) => {
 }
 
 const websocketConnectionEstablished = () => {
-    console.log("connected to websocket")
     return {
         type: "WEBSOCKET_CONNECTION_ESTABLISHED",
         payload: {}
@@ -56,7 +50,6 @@ const websocketConnectionEstablished = () => {
 }
 
 const websocketConnectionDropped = () => {
-    console.log("disconnected from websocket")
     return {
         type: "WEBSOCKET_CONNECTION_DROPPED",
         payload: {}

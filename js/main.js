@@ -26,7 +26,6 @@ store.subscribe(() => {
     }
 
     previousGame = newGame;
-    console.log(store.getState());
 })
 
 // Immediately connected to websocket, this could also be done only when e.g a button is pushed
