@@ -9,14 +9,22 @@ const Wrapper = React.createClass({
   }
 });
 
-const renderWithWrapperAndFind = (element, className) => {
-  let dom = TestUtils.renderIntoDocument(
-    <Wrapper>
-      {element}
-    </Wrapper>
+const wrap = (element) => {
+  return TestUtils.renderIntoDocument(
+      <Wrapper>
+        {element}
+      </Wrapper>
   );
+};
 
+const renderWithWrapperAndFindByTag = (element, tagName) => {
+  const dom = wrap(element)
+  return TestUtils.findRenderedDOMComponentWithTag(dom, tagName)
+}
+
+const renderWithWrapperAndFind = (element, className) => {
+  const dom = wrap(element)
   return TestUtils.findRenderedDOMComponentWithClass(dom, className)
 };
 
-module.exports = { renderWithWrapperAndFind };
+module.exports = { renderWithWrapperAndFindByTag,  renderWithWrapperAndFind};

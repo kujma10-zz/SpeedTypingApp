@@ -9,22 +9,18 @@ const StartButton = (props) => {
 
     if (!props.gameInProgress) {
         return (
-            <div className="start-button">
-                <button
-                    disabled={!props.wordsFetched}
-                    onClick={handleStartButton}>
-                    Start
-                </button>
-            </div>
+            <button
+                disabled={!props.wordsFetched}
+                onClick={handleStartButton}>
+                Start
+            </button>
         );
-    }else{
+    } else {
         return (
-            <div className="stop-button">
-                <button
-                    onClick={handleStopButton}>
-                    Stop
-                </button>
-            </div>
+            <button
+                onClick={handleStopButton}>
+                Stop
+            </button>
         );
     }
 

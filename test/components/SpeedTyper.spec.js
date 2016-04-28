@@ -9,7 +9,6 @@ import TypingContainer from "../../js/containers/TypingContainer";
 import StatsContainer from "../../js/containers/StatsContainer";
 import TimerContainer from "../../js/containers/TimerContainer";
 import StartButtonContainer from "../../js/containers/StartButtonContainer";
-import StopButtonContainer from "../../js/containers/StopButtonContainer";
 import WordsFetcherContainer from "../../js/containers/WordsFetcherContainer";
 
 describe('SpeedTyper', () => {
@@ -56,15 +55,9 @@ describe('SpeedTyper', () => {
     expect(startButtonContainer.type).to.eq(StartButtonContainer);
   });
 
-  it('renders the stop button container', () => {
-    let speedTyper = buildSpeedTyper("green");
-    let stopButtonContainer = speedTyper.props.children[2];
-    expect(stopButtonContainer.type).to.eq(StopButtonContainer);
-  });
-
   it('renders the words fetcher container', () => {
     let speedTyper = buildSpeedTyper("green");
-    let wordsFetcherContainer = speedTyper.props.children[3];
+    let wordsFetcherContainer = speedTyper.props.children[2];
     expect(wordsFetcherContainer.type).to.eq(WordsFetcherContainer);
   });
 });
