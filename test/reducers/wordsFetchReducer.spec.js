@@ -25,7 +25,7 @@ describe('FetchReducer', () => {
     describe('WORDS_FETCH_STOPPED', () => {
         it('sets fetching to be not in progress', () => {
             let action = {type: 'WORDS_FETCH_STOPPED', payload: {}}
-            const newState = reduce(undefined, action)
+            const newState = reduce({wordsFetchInProgress: true}, action)
             expect(newState.wordsFetchInProgress).to.eq(false)
         });
     });
