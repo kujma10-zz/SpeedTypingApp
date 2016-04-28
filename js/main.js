@@ -7,7 +7,10 @@ import thunkMiddleware from 'redux-thunk'
 import speedTyperReducer from './reducers'
 import { websocketConnectionRequested, sendWebsocketMessage } from './actions/Websocket';
 
-let store = createStore(speedTyperReducer, applyMiddleware(thunkMiddleware))
+import apmLogger from "./middleware/ActionsPerMinuteLogger"
+
+
+let store = createStore(speedTyperReducer, applyMiddleware(thunkMiddleware, apmLogger(window.console)))
 
 ReactDOM.render(
     <Provider store={store}>
@@ -28,6 +31,5 @@ store.subscribe(() => {
     previousGame = newGame;
 })
 
-// Immediately connected to websocket, this could also be done only when e.g a button is pushed
 store.dispatch(websocketConnectionRequested())
 
