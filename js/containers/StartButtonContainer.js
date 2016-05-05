@@ -1,25 +1,27 @@
-/**
- * Created by Kote on 4/19/2016.
- */
-
 import React from "react";
-import StartButton from '../components/StartButton';
-import { startGame } from '../actions';
-import { stopGame } from '../actions';
+import StartButton from "../components/StartButton";
 import { connect } from 'react-redux'
+import { startGame, endGame, startWordFetch } from '../actions';
+import { isStarted } from '../reducers';
+import { push } from 'react-router-redux'
 
 const mapStateToProps = (state) => {
-    return {
-        gameInProgress: state.game.gameInProgress,
-        wordsFetched: state.game.wordsFetched
-    }
+  return {
+    isStarted: isStarted(state)
+  }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        onStartButtonClick: () => dispatch(startGame()),
-        onStopButtonClick: () => dispatch(stopGame())
+  return {
+    onStartClick: () => {
+      dispatch(startGame())
+      dispatch(startWordFetch())
+    },
+    onEndClick: () => {
+      dispatch(endGame())
+      dispatch(push("/pastGames"))
     }
-};
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(StartButton);

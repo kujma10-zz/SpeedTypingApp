@@ -17,7 +17,7 @@ const Word = (props) => {
   };
 
   return(
-      <div className={"word "+ props.color} >{buildLetters()}</div>
+    <div className={"word "+ props.color} >{buildLetters()}</div>
   );
 };
 Word.propTypes = {

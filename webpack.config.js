@@ -15,7 +15,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015'],
         },
@@ -23,3 +23,4 @@ module.exports = {
     ]
   }
 };
+

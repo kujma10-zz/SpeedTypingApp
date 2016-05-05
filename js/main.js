@@ -1,35 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GameContainer from "./containers/GameContainer";
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import speedTyperReducer from './reducers'
-import { websocketConnectionRequested, sendWebsocketMessage } from './actions/Websocket';
+import thunk from 'redux-thunk';
+import speedTyperReducer from './reducers';
+import websocketPublisher from './middlewares/WebsocketPublisher'
+import { sendWebsocketMessage, websocketConnectionRequested } from './actions/Websocket'
+import actionsPerMinuteLogger from './middlewares/ActionsPerMinuteLogger'
+import createRoutes from '../Routes'
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux'
+import { routerMiddleware } from 'react-router-redux'
+import R from 'ramda'
 
-import apmLogger from "./middleware/ActionsPerMinuteLogger"
 
+const finalCreateStore = R.compose(
+    applyMiddleware(
+        thunk,
+        websocketPublisher(sendWebsocketMessage),
+        actionsPerMinuteLogger(console),
+        routerMiddleware(browserHistory)
+    ),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+)(createStore)
 
-let store = createStore(speedTyperReducer, applyMiddleware(thunkMiddleware, apmLogger(window.console)))
+let store = finalCreateStore(speedTyperReducer)
+
+const history = syncHistoryWithStore(browserHistory, store)
+
+let Routes = createRoutes(history)
 
 ReactDOM.render(
     <Provider store={store}>
-        <GameContainer />
+        <Routes />
     </Provider>,
     document.getElementById('content')
 );
-
-let previousGame;
-store.subscribe(() => {
-
-    const newGame = store.getState().game
-
-    if (previousGame !== newGame) {
-        sendWebsocketMessage(store.getState().game)
-    }
-
-    previousGame = newGame;
-})
 
 store.dispatch(websocketConnectionRequested())
 

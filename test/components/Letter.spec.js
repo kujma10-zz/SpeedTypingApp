@@ -4,24 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import Letter from '../../js/components/Letter';
+import { wrap } from '../Wrapper'
 
 describe('Letter', () => {
 
-  var Wrapper = React.createClass({
-    render: function() {
-      return (
-          <div>{this.props.children}</div>
-      );
-    }
-  });
-
   var buildLetter = ((color, letter) => {
-    let dom = TestUtils.renderIntoDocument(
-      <Wrapper>
-        <Letter color={color} letter={letter} />
-      </Wrapper>
-    );
-
+    let dom = wrap( <Letter color={color} letter={letter} /> );
     return TestUtils.findRenderedDOMComponentWithClass(dom, "letter")
   });
 

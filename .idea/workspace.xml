@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eba8ee14-3567-4724-9ee6-08386a70b18f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Game.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/RemoteSpeedTyper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Timer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Typing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/WordsFetcher.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/GameContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/TimerContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/TypingContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/WordsFetcherContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/middleware/ActionsPerMinuteLogger.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/RemoteReducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/SpeedTyperReducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/WebsocketReducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/WordsFetchReducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/actions/FetchWordsAction-test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/actions/SetCurrentInputAction-test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Game.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/RemoteSpeedTyper.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Timer.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Typing.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/WordsFetcher.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/middleware/ActionPerMinuteLogger-test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/RemoteReducer.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/WebsocketReducer.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/speedTyperReducer.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/statsSelectors.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/wordsFetchReducer.spec.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Words.json" afterPath="$PROJECT_DIR$/Words.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions/Websocket.js" afterPath="$PROJECT_DIR$/js/actions/Websocket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions/index.js" afterPath="$PROJECT_DIR$/js/actions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Letter.js" afterPath="$PROJECT_DIR$/js/components/Letter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/SpeedTyper.js" afterPath="$PROJECT_DIR$/js/components/SpeedTyper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/StartButton.js" afterPath="$PROJECT_DIR$/js/components/StartButton.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Stats.js" afterPath="$PROJECT_DIR$/js/components/Stats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Words.js" afterPath="$PROJECT_DIR$/js/components/Words.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/word.js" afterPath="$PROJECT_DIR$/js/components/word.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/RemoteStatsContainer.js" afterPath="$PROJECT_DIR$/js/containers/RemoteStatsContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/RemoteWordsContainer.js" afterPath="$PROJECT_DIR$/js/containers/RemoteWordsContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/StartButtonContainer.js" afterPath="$PROJECT_DIR$/js/containers/StartButtonContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/StatsContainer.js" afterPath="$PROJECT_DIR$/js/containers/StatsContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/WordsContainer.js" afterPath="$PROJECT_DIR$/js/containers/WordsContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/reducers/index.js" afterPath="$PROJECT_DIR$/js/reducers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Wrapper.js" afterPath="$PROJECT_DIR$/test/Wrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/actions/Websocket-test.js" afterPath="$PROJECT_DIR$/test/actions/Websocket-test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/Letter.spec.js" afterPath="$PROJECT_DIR$/test/components/Letter.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/SpeedTyper.spec.js" afterPath="$PROJECT_DIR$/test/components/SpeedTyper.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/StartButton.spec.js" afterPath="$PROJECT_DIR$/test/components/StartButton.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/Stats.spec.js" afterPath="$PROJECT_DIR$/test/components/Stats.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mocha.opts" afterPath="$PROJECT_DIR$/test/mocha.opts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.js" afterPath="$PROJECT_DIR$/test/test_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+    </list>
+    <ignored path="SpeedTypingApp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="SpeedTypingApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.81991524">
+              <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AjaxRequest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/actions/AjaxRequest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Websocket-test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/actions/Websocket-test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <marker date="1462369808342" expanded="true" signature="2369:2372" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Websocket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/actions/Websocket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+              <folding>
+                <marker date="1462369808295" expanded="true" signature="1493:1496" placeholder="{&quot;type&quot;: &quot;WEBSOCKET_CONNECTION_DROPPED&quot;...}" />
+                <marker date="1462369808295" expanded="true" signature="1493:1498" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js/containers/StopButtonContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/TimerContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/WordsContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/WordsFetcherContainer.js" />
+        <option value="$PROJECT_DIR$/js/reducers/InputReducer.js" />
+        <option value="$PROJECT_DIR$/js/containers/TypingContainer.js" />
+        <option value="$PROJECT_DIR$/js/reducers/WordsFetchReducer.js" />
+        <option value="$PROJECT_DIR$/js/reducers/GameReducer.js" />
+        <option value="$PROJECT_DIR$/test/components/StopButton.spec.js" />
+        <option value="$PROJECT_DIR$/js/components/StopButton.js" />
+        <option value="$PROJECT_DIR$/js/components/Timer.js" />
+        <option value="$PROJECT_DIR$/test/components/Timer.spec.js" />
+        <option value="$PROJECT_DIR$/test/reducers/wordsFetchReducer.spec.js" />
+        <option value="$PROJECT_DIR$/test/actions/FetchWordsAction-test.js" />
+        <option value="$PROJECT_DIR$/test/reducers/statsSelectors.spec.js" />
+        <option value="$PROJECT_DIR$/test/reducers/speedTyperReducer.spec.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/js/reducers/index.js" />
+        <option value="$PROJECT_DIR$/js/reducers/SpeedTyperReducer.js" />
+        <option value="$PROJECT_DIR$/server/WebpackDevServer.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/js/containers/RemoteWordsContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/StatsContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/RemoteStatsContainer.js" />
+        <option value="$PROJECT_DIR$/js/components/RemoteInput.js" />
+        <option value="$PROJECT_DIR$/js/containers/GameContainer.js" />
+        <option value="$PROJECT_DIR$/js/containers/StartButtonContainer.js" />
+        <option value="$PROJECT_DIR$/js/components/SpeedTyper.js" />
+        <option value="$PROJECT_DIR$/js/components/StartButton.js" />
+        <option value="$PROJECT_DIR$/test/Wrapper.js" />
+        <option value="$PROJECT_DIR$/test/components/StartButton.spec.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/test/components/Stats.spec.js" />
+        <option value="$PROJECT_DIR$/test/components/Typing.spec.js" />
+        <option value="$PROJECT_DIR$/test/components/WordsFetcher.spec.js" />
+        <option value="$PROJECT_DIR$/test/actions/Websocket-test.js" />
+        <option value="$PROJECT_DIR$/js/reducers/RemoteReducer.js" />
+        <option value="$PROJECT_DIR$/js/components/Game.js" />
+        <option value="$PROJECT_DIR$/js/components/RemoteSpeedTyper.js" />
+        <option value="$PROJECT_DIR$/test/components/SpeedTyper.spec.js" />
+        <option value="$PROJECT_DIR$/test/components/RemoteSpeedTyper.spec.js" />
+        <option value="$PROJECT_DIR$/test/components/Game.spec.js" />
+        <option value="$PROJECT_DIR$/test/reducers/WordsFetchReducer.spec.js" />
+        <option value="$PROJECT_DIR$/test/reducers/WebsocketReducer.spec.js" />
+        <option value="$PROJECT_DIR$/test/reducers/RemoteReducer.spec.js" />
+        <option value="$PROJECT_DIR$/js/middleware/ExampleMiddleware.js" />
+        <option value="$PROJECT_DIR$/js/actions/Websocket.js" />
+        <option value="$PROJECT_DIR$/js/actions/index.js" />
+        <option value="$PROJECT_DIR$/js/middleware/ActionsPerMinuteLogger.js" />
+        <option value="$PROJECT_DIR$/test/middleware/ActionPerMinuteLogger-test.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NodeJsMochaPackageDirSetting">
+    <data>C:\Users\Kote\WebstormProjects\SpeedTypingApp\node_modules\mocha</data>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reducers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SpeedTypingApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="javascript.nodejs.core.library.configured.version" value="5.8.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.mocha.node_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\Kote\WebstormProjects\SpeedTypingApp\node_modules\mocha" />
+    <property name="javascript.karma.node_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
+    <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\test" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\test\actions" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\js\components" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\js\reducers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\js" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\test\components" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\js\test" />
+      <recent name="C:\Users\Kote\WebstormProjects\SpeedTypingApp\js\components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Mocha.StatisticsContainer.creates Speed component">
+    <configuration default="false" name="StatisticsContainer.creates Accuracy component" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/StatisticsContainer-test.js</test-file>
+      <test-names>
+        <name value="StatisticsContainer" />
+        <name value="creates Accuracy component" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="StatisticsContainer.creates Speed component" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/StatisticsContainer-test.js</test-file>
+      <test-names>
+        <name value="StatisticsContainer" />
+        <name value="creates Speed component" />
+      </test-names>
+      <method />
+    </configuration>
+    <configuration default="false" name="StatisticsContainer-test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="node_modules/jest-cli/bin/jest.js" application-parameters="--runInBand" node-parameters="--harmony" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="node_modules/jest-cli/bin/jest.js" application-parameters="--runInBand" node-parameters="--harmony" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Mocha.StatisticsContainer.creates Accuracy component" />
+      <item index="1" class="java.lang.String" itemvalue="Mocha.StatisticsContainer.creates Speed component" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.StatisticsContainer-test.js" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Mocha.StatisticsContainer.creates Speed component" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.StatisticsContainer.creates Accuracy component" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.StatisticsContainer-test.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eba8ee14-3567-4724-9ee6-08386a70b18f" name="Default" comment="" />
+      <created>1458062615212</created>
+      <option name="number" value="Default" />
+      <updated>1458062615212</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="StatisticsContainer_creates_Accuracy_component - 2016.04.07 at 16h 35m 53s.xml">
+      <configuration name="StatisticsContainer.creates Accuracy component" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="StatisticsContainer_creates_Speed_component - 2016.04.07 at 16h 38m 27s.xml">
+      <configuration name="StatisticsContainer.creates Speed component" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="StatisticsContainer_creates_Speed_component - 2016.04.07 at 16h 42m 03s.xml">
+      <configuration name="StatisticsContainer.creates Speed component" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="StatisticsContainer_creates_Speed_component - 2016.04.07 at 16h 42m 48s.xml">
+      <configuration name="StatisticsContainer.creates Speed component" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31066668" sideWeight="0.5025284" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34725848" sideWeight="0.49747154" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2075718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.037037">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/HandleIncomingWebSockets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/WebpackDevServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/WebSocketServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/Stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/containers/StatsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/containers/WordsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/containers/StartButtonContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/StartButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Wrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.333333">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/containers/RemoteStatsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/containers/RemoteWordsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/components/Word.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/components/Stats.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/components/Words.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/components/StartButton.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/components/SpeedTyper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/components/SpeedTyper.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/actions/Websocket-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <marker date="1462369808342" expanded="true" signature="2369:2372" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/Websocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding>
+            <marker date="1462369808295" expanded="true" signature="1493:1496" placeholder="{&quot;type&quot;: &quot;WEBSOCKET_CONNECTION_DROPPED&quot;...}" />
+            <marker date="1462369808295" expanded="true" signature="1493:1498" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/AjaxRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81991524">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -11,20 +11,15 @@ const Wrapper = React.createClass({
 
 const wrap = (element) => {
   return TestUtils.renderIntoDocument(
-      <Wrapper>
-        {element}
-      </Wrapper>
+    <Wrapper>
+      {element}
+    </Wrapper>
   );
 };
 
-const renderWithWrapperAndFindByTag = (element, tagName) => {
+const wrapAndFindByTag = (element, tagName) => {
   const dom = wrap(element)
   return TestUtils.findRenderedDOMComponentWithTag(dom, tagName)
 }
 
-const renderWithWrapperAndFind = (element, className) => {
-  const dom = wrap(element)
-  return TestUtils.findRenderedDOMComponentWithClass(dom, className)
-};
-
-module.exports = { renderWithWrapperAndFindByTag,  renderWithWrapperAndFind};
+module.exports = { wrap, wrapAndFindByTag };

@@ -1,68 +1,70 @@
-import ajaxRequest from './AjaxRequest'
+import ajaxRequest from './AjaxRequest';
+import { getCurrentTime } from '../reducers';
 
-export const setCurrentInput = (currentInput) => {
-    return {
-        type: "SET_CURRENT_INPUT",
-        payload: {currentInput: currentInput}
+// https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
     }
+    return shuffled.slice(0, size);
+};
+
+export const setWords = (words) => {
+  return {
+    type: "START_GAME",
+    payload: { words: words, startTime: getCurrentTime() }
+  }
+}
+
+export const startWordFetch = () => {
+  return {
+    type: "START_WORD_FETCH"
+  }
+}
+
+export const stopWordFetch = () => {
+  return {
+    type: "STOP_WORD_FETCH"
+  }
 }
 
 export const startGame = () => {
-    return (dispatch, getState) => {
-        const { timerId } = getState().game;
-        if (timerId === null) {
-            const timerId = setInterval(() => {
-                dispatch({type: "TICK"})
-            }, 1000)
-            dispatch({type: "START_GAME", payload: {timerId: timerId}})
-        }
+  return (dispatch, getState) => {
+    const addWords = (words) => {
+      if (getState().currentGame.wordFetchInProgress) {
+        const randomWords = getRandomSubarray(words, 30);
+        dispatch(setWords(randomWords));
+        dispatch(stopWordFetch())
+      }
     }
+
+    const onFetchError = (error) => {
+      dispatch(stopWordFetch())
+    }
+
+    ajaxRequest("/Words.json", "GET", addWords, onFetchError)
+  }
 }
 
-export const stopGame = () => {
-    return (dispatch, getState) => {
-        const { timerId } = getState().game;
-        if (timerId !== null) {
-            clearInterval(timerId)
-            dispatch({type: "STOP_GAME", payload: {timerId: timerId}})
-        }
+const lastGameStats = (state) => {
+  return {
+    type: "END_GAME",
+    payload: {
+      words: state.words,
+      pastInput: state.pastInput,
+      startTime: state.startTime,
+      endTime: Math.floor(Date.now() / 1000)
     }
+  }
 }
 
-export const fetchWords = () => {
-    return (dispatch, getState) => {
-        const addWords = (words) => {
-            if (getState().fetching.wordsFetchInProgress) {
-                dispatch({type: "ADD_WORDS", payload: {words: words}})
-                dispatch(stopWordsFetch())
-            }
-        }
-
-        const onFetchError = (error) => {
-            dispatch(stopWordsFetch())
-        }
-
-        ajaxRequest("/Words.json", "GET", addWords, onFetchError)
-    }
-}
-
-export const wordsFetchRequested = () => {
-    return {
-        type: "WORDS_FETCH_REQUESTED",
-        payload: {}
-    }
-}
-
-export const stopWordsFetch = () => {
-    return {
-        type: "WORDS_FETCH_STOPPED",
-        payload: {}
-    }
-}
-
-export const receivedRemotePlayerGame = (game) => {
-    return {
-        type: "RECEIVED_REMOTE_PLAYER_GAME",
-        payload: {game: game}
-    }
+export const endGame = () => {
+  return (dispatch, getState) => {
+    let state = getState();
+    dispatch(lastGameStats(state.currentGame));
+  }
 }

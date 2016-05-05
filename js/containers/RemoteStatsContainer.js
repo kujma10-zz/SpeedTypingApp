@@ -1,18 +1,27 @@
-/**
- * Created by Kote on 4/27/2016.
- */
 import React from "react";
 import Stats from "../components/Stats";
 import { connect } from 'react-redux'
-import { calculateAccuracy, calculateWordsPerMinute } from '../reducers/SpeedTyperReducer';
+import {
+  calculateAccuracy,
+  calculateWordsPerMinute,
+  calculateTimeElapsed,
+  calculateHighestWordsPerMinute
+} from '../reducers';
+import TickingContainer from './TickingContainer'
 
-const mapStateToProps = (state) => {
-    return {
-        accuracy: calculateAccuracy(state.remote.game),
-        wordsPerMinute: calculateWordsPerMinute(state.remote.game),
-        bestWordsPerMinute: state.remote.game.bestWordsPerMinute,
-        bestAccuracy: state.remote.game.bestAccuracy
-    }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    accuracy: calculateAccuracy(state.remote.currentGame),
+    wordsPerMinute: calculateWordsPerMinute(state.remote.currentGame, ownProps.currentTime),
+    timeElapsed: calculateTimeElapsed(state.remote.currentGame.startTime, ownProps.currentTime),
+    highestWordsPerMinute: calculateHighestWordsPerMinute(state.remote.pastGames)
+  }
 };
 
-export default connect(mapStateToProps)(Stats);
+const RemoteStatsContainer = connect(mapStateToProps)(Stats);
+
+const TickingRemoteStatsContainer = (_) => {
+  return React.createElement(TickingContainer, {component: RemoteStatsContainer})
+}
+
+export default TickingRemoteStatsContainer;

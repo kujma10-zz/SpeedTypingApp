@@ -1,24 +1,21 @@
 import React from "react";
-import WordsContainer from "./../containers/WordsContainer";
-import TypingContainer from "./../containers/TypingContainer";
-import StatsContainer from "./../containers/StatsContainer";
-import StartButtonContainer from "./../containers/StartButtonContainer"
-import TimerContainer from "./../containers/TimerContainer"
-import WordsFetcherContainer from "./../containers/WordsFetcherContainer"
-
-import RemoteSpeedTyper from "./RemoteSpeedTyper";
+import WordsContainer from "../containers/WordsContainer";
+import GlobalKeysContainer from "../containers/GlobalKeysContainer";
+import StatsContainer from "../containers/StatsContainer";
+import RemoteContainer from "../containers/RemoteContainer";
+import StartButtonContainer from "../containers/StartButtonContainer";
 
 const SpeedTyper = (props) => {
     return (
         <div className="SpeedTyper">
             <div className="wordsbox">
                 <StatsContainer />
-                <TimerContainer/>
                 <WordsContainer />
-                <TypingContainer />
+                <GlobalKeysContainer/>
+                <RemoteContainer />
             </div>
-            <StartButtonContainer/>
-            <WordsFetcherContainer/>
+            <StartButtonContainer />
+
         </div>
     );
 };

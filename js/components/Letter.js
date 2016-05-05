@@ -2,7 +2,7 @@ import React from 'react';
 
 const Letter = (props) => {
   return(
-      <div className={"letter " + props.color}>{props.letter}</div>
+    <div className={"letter " + props.color}>{props.letter}</div>
   );
 };
 Letter.propTypes = {
@@ -11,4 +11,3 @@ Letter.propTypes = {
 };
 
 export { Letter as default };
-

@@ -1,72 +1,56 @@
-/**
- * Created by Kote on 4/21/2016.
- */
 'use strict';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import StartButton from '../../js/components/StartButton';
-import R from 'ramda'
-import {renderWithWrapperAndFindByTag} from '../Wrapper';
+import { wrapAndFindByTag } from '../Wrapper';
 
 describe('StartButton', () => {
 
+  it('displays start button if game not started', () => {
+    let button = wrapAndFindByTag(
+      <StartButton onStartClick={sinon.stub()} onEndClick={sinon.stub()} isStarted={false} />,
+      'button'
+    )
+    expect(button.textContent).to.eq("Start game");
+  });
 
-    it('disables start button when words are not fetched yet', () => {
-        let button = renderWithWrapperAndFindByTag(
-            <StartButton onStartButtonClick={sinon.stub()} onStopButtonClick={sinon.stub()} gameInProgress={false} wordsFetched={false} />,
-            'button'
-        )
-        expect(button.disabled).to.eq(true)
-    });
+  it("calls onStartClick when start button clicked", () => {
+    let onStartClick = sinon.stub();
+    let onEndClick = sinon.stub();
 
-    it('displays start button if game not started', () => {
-        let button = renderWithWrapperAndFindByTag(
-            <StartButton onStartButtonClick={sinon.stub()} onStopButtonClick={sinon.stub()} gameInProgress={false} wordsFetched={true} />,
-            'button'
-        )
-        expect(button.textContent).to.eq("Start");
-    });
+    let button = wrapAndFindByTag(
+      <StartButton onStartClick={onStartClick} onEndClick={onEndClick} isStarted={false} />,
+      'button'
+    )
 
-    it("calls onStartClick when start button clicked", () => {
-        let onStartClick = sinon.stub();
-        let onStopClick = sinon.stub();
+    TestUtils.Simulate.click(button);
 
-        let button = renderWithWrapperAndFindByTag(
-            <StartButton onStartButtonClick={onStartClick} onStopButtonClick={onStopClick} gameInProgress={false} wordsFetched={true} />,
-            'button'
-        )
+    expect(onStartClick).to.have.been.calledOnce;
+    expect(onEndClick).to.not.have.been.called;
+  })
 
-        TestUtils.Simulate.click(button);
+  it('displays end button if game is not started', () => {
+    let button = wrapAndFindByTag(
+      <StartButton onStartClick={sinon.stub()} onEndClick={sinon.stub()} isStarted={true} />,
+      'button'
+    )
+    expect(button.textContent).to.eq("End game");
+  });
 
-        expect(onStartClick).to.have.been.calledOnce;
-        expect(onStopClick).to.not.have.been.called;
-    })
+  it('calls onEndClick when end button clicked', () => {
+    let onStartClick = sinon.stub();
+    let onEndClick = sinon.stub();
 
-    it('displays stop button if game is in progress', () => {
-        let button = renderWithWrapperAndFindByTag(
-            <StartButton onStartButtonClick={sinon.stub()} onStopButtonClick={sinon.stub()} gameInProgress={true} wordsFetched={true} />,
-            'button'
-        )
-        expect(button.textContent).to.eq("Stop");
-    });
+    let button = wrapAndFindByTag(
+      <StartButton onStartClick={onStartClick} onEndClick={onEndClick} isStarted={true} />,
+      'button'
+    )
 
-    it('calls onStopClick when stop button clicked', () => {
-        let onStartClick = sinon.stub();
-        let onStopClick = sinon.stub();
+    TestUtils.Simulate.click(button);
 
-        let button = renderWithWrapperAndFindByTag(
-            <StartButton onStartButtonClick={onStartClick} onStopButtonClick={onStopClick} gameInProgress={true} wordsFetched={true} />,
-            'button'
-        )
-
-        TestUtils.Simulate.click(button);
-
-        expect(onStopClick).to.have.been.calledOnce;
-        expect(onStartClick).to.not.have.been.called;
-    })
+    expect(onEndClick).to.have.been.calledOnce;
+    expect(onStartClick).to.not.have.been.called;
+  })
 });
-
-
-
