@@ -1,26 +1,32 @@
-var path = require('path');
 
-var port = process.env.port || 3000;
-var host = 'localhost';
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
-    `webpack-dev-server/client?http://${host}:${port}`,
-    './js/main.js',
+    './js/main.js'
   ],
-  output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, '/'),
-  },
   module: {
     loaders: [
-      {
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015'],
-        },
-      }
+      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
+      { test: /\.s?css$/, loader: 'style!css!sass' },
     ]
-  }
+  },
+  resolve: {
+    extensions: ['', '.js']
+  },
+  output: {
+    path: path.join(__dirname, '/'),
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './',
+    hot: true
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };
-

@@ -1,15 +1,19 @@
 import { receivedState } from "./Remote.js"
 
-const websocketConf = {
-  port: 8081,
-  host: 'localhost'
+
+var host;
+if(process.env.NODE_ENV == 'production') {
+  host = location.origin.replace(/^http/, 'ws');
+} else {
+  host='ws://localhost:8081'
 }
+
 
 let websocketConnection;
 export const websocketConnectionRequested = () => {
   return (dispatch, getState) => {
     websocketConnection = new WebSocket(
-      `ws://${websocketConf.host}:${websocketConf.port}/`,
+      `${host}/`,
       'echo-protocol'
     );
 
