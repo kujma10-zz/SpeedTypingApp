@@ -31,8 +31,7 @@
     "mock-socket": "^2.0.0",
     "react-addons-test-utils": "^0.14.8",
     "sinon": "^1.17.3",
-    "sinon-chai": "^2.8.0",
-    "webpack-dev-server": "^1.14.1"
+    "sinon-chai": "^2.8.0"
   },
   "scripts": {
     "test": "mocha",

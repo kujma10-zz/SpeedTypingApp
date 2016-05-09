@@ -2,62 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eba8ee14-3567-4724-9ee6-08386a70b18f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Game.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/RemoteSpeedTyper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Timer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/Typing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/components/WordsFetcher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/GameContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/TimerContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/TypingContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/containers/WordsFetcherContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/middleware/ActionsPerMinuteLogger.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/RemoteReducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/SpeedTyperReducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/WebsocketReducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/reducers/WordsFetchReducer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/actions/FetchWordsAction-test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/actions/SetCurrentInputAction-test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Game.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/RemoteSpeedTyper.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Timer.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/Typing.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/components/WordsFetcher.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/middleware/ActionPerMinuteLogger-test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/RemoteReducer.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/WebsocketReducer.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/speedTyperReducer.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/statsSelectors.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/reducers/wordsFetchReducer.spec.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Words.json" afterPath="$PROJECT_DIR$/Words.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions/Websocket.js" afterPath="$PROJECT_DIR$/js/actions/Websocket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions/index.js" afterPath="$PROJECT_DIR$/js/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Letter.js" afterPath="$PROJECT_DIR$/js/components/Letter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/SpeedTyper.js" afterPath="$PROJECT_DIR$/js/components/SpeedTyper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/StartButton.js" afterPath="$PROJECT_DIR$/js/components/StartButton.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Stats.js" afterPath="$PROJECT_DIR$/js/components/Stats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/Words.js" afterPath="$PROJECT_DIR$/js/components/Words.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/components/word.js" afterPath="$PROJECT_DIR$/js/components/word.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/RemoteStatsContainer.js" afterPath="$PROJECT_DIR$/js/containers/RemoteStatsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/RemoteWordsContainer.js" afterPath="$PROJECT_DIR$/js/containers/RemoteWordsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/StartButtonContainer.js" afterPath="$PROJECT_DIR$/js/containers/StartButtonContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/StatsContainer.js" afterPath="$PROJECT_DIR$/js/containers/StatsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/containers/WordsContainer.js" afterPath="$PROJECT_DIR$/js/containers/WordsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/reducers/index.js" afterPath="$PROJECT_DIR$/js/reducers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Wrapper.js" afterPath="$PROJECT_DIR$/test/Wrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/actions/Websocket-test.js" afterPath="$PROJECT_DIR$/test/actions/Websocket-test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/Letter.spec.js" afterPath="$PROJECT_DIR$/test/components/Letter.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/SpeedTyper.spec.js" afterPath="$PROJECT_DIR$/test/components/SpeedTyper.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/StartButton.spec.js" afterPath="$PROJECT_DIR$/test/components/StartButton.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/components/Stats.spec.js" afterPath="$PROJECT_DIR$/test/components/Stats.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mocha.opts" afterPath="$PROJECT_DIR$/test/mocha.opts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.js" afterPath="$PROJECT_DIR$/test/test_helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="SpeedTypingApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +23,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81991524">
-              <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7017544">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/webpack/buildin/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/Module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/debug/node.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -108,18 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Websocket-test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/actions/Websocket-test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding>
-                <marker date="1462369808342" expanded="true" signature="2369:2372" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Websocket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/actions/Websocket.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,7 +122,6 @@
               <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
               <folding>
                 <marker date="1462369808295" expanded="true" signature="1493:1496" placeholder="{&quot;type&quot;: &quot;WEBSOCKET_CONNECTION_DROPPED&quot;...}" />
-                <marker date="1462369808295" expanded="true" signature="1493:1498" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -180,7 +174,6 @@
         <option value="$PROJECT_DIR$/js/components/StartButton.js" />
         <option value="$PROJECT_DIR$/test/Wrapper.js" />
         <option value="$PROJECT_DIR$/test/components/StartButton.spec.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/components/Stats.spec.js" />
         <option value="$PROJECT_DIR$/test/components/Typing.spec.js" />
         <option value="$PROJECT_DIR$/test/components/WordsFetcher.spec.js" />
@@ -200,6 +193,7 @@
         <option value="$PROJECT_DIR$/js/middleware/ActionsPerMinuteLogger.js" />
         <option value="$PROJECT_DIR$/test/middleware/ActionPerMinuteLogger-test.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -243,7 +237,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,58 +269,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reducers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SpeedTypingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,6 +287,7 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\Kote\WebstormProjects\SpeedTypingApp\node_modules\mocha" />
     <property name="javascript.karma.node_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="node.js&#9;FILE&#9;file://C:/Users/Kote/WebstormProjects/SpeedTypingApp/node_modules/debug/node.js&#10;module.js&#9;FILE&#9;file://C:/Users/Kote/WebstormProjects/SpeedTypingApp/node_modules/webpack/lib/Module.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -484,14 +429,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31066668" sideWeight="0.5025284" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2075718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34725848" sideWeight="0.49747154" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55744123" sideWeight="0.49747154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -499,7 +445,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2075718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -522,10 +467,47 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/AjaxRequest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/actions/Websocket-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <marker date="1462369808342" expanded="true" signature="2369:2372" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions/Websocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding>
+            <marker date="1462369808295" expanded="true" signature="1493:1496" placeholder="{&quot;type&quot;: &quot;WEBSOCKET_CONNECTION_DROPPED&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -554,13 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -610,13 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.333333">
           <caret line="29" column="48" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -700,7 +668,6 @@
           <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
           <folding>
             <marker date="1462369808295" expanded="true" signature="1493:1496" placeholder="{&quot;type&quot;: &quot;WEBSOCKET_CONNECTION_DROPPED&quot;...}" />
-            <marker date="1462369808295" expanded="true" signature="1493:1498" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -715,8 +682,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81991524">
-          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/webpack/buildin/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/Module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/debug/node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7017544">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding />
         </state>
       </provider>
